@@ -17,3 +17,8 @@ ln -s ~/dotfiles/.zshrc ~/.zshrc
 
 ### vsc-settings.json
 Copy the content of this file in the settings.json file for your VS Code.
+
+### .config/nvim
+```bash
+ln -s ~/dotfiles/.config/nvim ~/.config/nvim
+```
