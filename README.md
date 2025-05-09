@@ -13,3 +13,7 @@ Import this json file in your iTerm2 configurations.
 ### .zshrc
 ```bash
 ln -s ~/dotfiles/.zshrc ~/.zshrc
+```
+
+### vsc-settings.json
+Copy the content of this file in the settings.json file for your VS Code.

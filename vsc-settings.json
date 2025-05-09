@@ -1,0 +1,59 @@
+{
+  "editor.fontSize": 13,
+  "editor.formatOnSave": false,
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[erb]": {
+    "editor.defaultFormatter": "aliariff.vscode-erb-beautify",
+    "editor.formatOnSave": false
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.formatOnSave": false
+  },
+  "emmet.includeLanguages": {
+    "erb": "html"
+  },
+  "explorer.confirmDelete": false,
+  "files.associations": {
+    "*.html.erb": "erb",
+    "*.js.erb": "javascript"
+  },
+  "files.autoSave": "afterDelay",
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.mergeEditor": true,
+  "gitlens.views.branches.branches.layout": "list",
+  "gitlens.views.searchAndCompare.files.layout": "list",
+  "i18n-ally.sourceLanguage": "fr",
+  "i18n-ally.displayLanguage": "fr",
+  "i18n-ally.enabledFrameworks": [
+    "ruby-rails"
+  ],
+  "i18n-ally.localesPaths": [
+    "config/locales"
+  ],
+  "i18n-ally.translate.engines": ["google"],
+  "rubyLsp.rubyVersionManager": {
+    "identifier": "rbenv",
+  },
+  "rubyLsp.formatter": "auto",
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.external.osxExec": "iTerm.app",
+  "vscode-erb-beautify.customEnvVar": {
+    "LC_ALL": "en_US.UTF-8"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "monkeyC.developerKeyPath": "/Users/aschmitz/dev/garmin/MinimalWatchFace/developer_key",
+  "workbench.colorTheme": "GitHub Dark",
+  "gitlens.views.commitDetails.files.layout": "tree",
+  "editor.fontFamily": "Meslo LGS NF, Menlo, Monaco, 'Courier New', monospace"
+}
