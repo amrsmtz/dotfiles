@@ -98,104 +98,104 @@
   },
   "Keyboard Map" : {
     "0xf702-0x300000" : {
-      "Action" : 11,
-      "Text" : "0x1"
+      "Text" : "0x1",
+      "Action" : 11
     },
     "0x39-0x200000" : {
-      "Action" : 12,
-      "Text" : "9"
+      "Text" : "9",
+      "Action" : 12
     },
     "0xf703-0x300000" : {
-      "Action" : 11,
-      "Text" : "0x5"
+      "Text" : "0x5",
+      "Action" : 11
     },
     "0xf702-0x280000" : {
-      "Action" : 10,
-      "Text" : "b"
+      "Text" : "b",
+      "Action" : 10
     },
     "0xf703-0x280000" : {
-      "Action" : 10,
-      "Text" : "f"
+      "Text" : "f",
+      "Action" : 10
     },
     "0x38-0x200000" : {
-      "Action" : 12,
-      "Text" : "8"
+      "Text" : "8",
+      "Action" : 12
     },
     "0x2d-0x200000" : {
-      "Action" : 12,
-      "Text" : "-"
+      "Text" : "-",
+      "Action" : 12
     },
     "0x3-0x200000" : {
-      "Action" : 11,
-      "Text" : "0xd"
+      "Text" : "0xd",
+      "Action" : 11
     },
     "0x37-0x200000" : {
-      "Action" : 12,
-      "Text" : "7"
+      "Text" : "7",
+      "Action" : 12
     },
     "0xf728-0x0" : {
-      "Action" : 11,
-      "Text" : "0x4"
+      "Text" : "0x4",
+      "Action" : 11
     },
     "0x32-0x200000" : {
-      "Action" : 12,
-      "Text" : "2"
+      "Text" : "2",
+      "Action" : 12
     },
     "0x31-0x200000" : {
-      "Action" : 12,
-      "Text" : "1"
+      "Text" : "1",
+      "Action" : 12
     },
     "0x36-0x200000" : {
-      "Action" : 12,
-      "Text" : "6"
+      "Text" : "6",
+      "Action" : 12
     },
     "0xf739-0x0" : {
-      "Action" : 13,
-      "Text" : ""
+      "Text" : "",
+      "Action" : 13
     },
     "0xf728-0x80000" : {
-      "Action" : 10,
-      "Text" : "d"
+      "Text" : "d",
+      "Action" : 10
     },
     "0x30-0x200000" : {
-      "Action" : 12,
-      "Text" : "0"
+      "Text" : "0",
+      "Action" : 12
     },
     "0x2b-0x200000" : {
-      "Action" : 12,
-      "Text" : "+"
+      "Text" : "+",
+      "Action" : 12
     },
     "0x35-0x200000" : {
-      "Action" : 12,
-      "Text" : "5"
+      "Text" : "5",
+      "Action" : 12
     },
     "0x34-0x200000" : {
-      "Action" : 12,
-      "Text" : "4"
+      "Text" : "4",
+      "Action" : 12
     },
     "0x2a-0x200000" : {
-      "Action" : 12,
-      "Text" : "*"
+      "Text" : "*",
+      "Action" : 12
     },
     "0x2f-0x200000" : {
-      "Action" : 12,
-      "Text" : "\/"
+      "Text" : "\/",
+      "Action" : 12
     },
     "0x33-0x200000" : {
-      "Action" : 12,
-      "Text" : "3"
+      "Text" : "3",
+      "Action" : 12
     },
     "0x2e-0x200000" : {
-      "Action" : 12,
-      "Text" : "."
+      "Text" : ".",
+      "Action" : 12
     },
     "0x7f-0x80000" : {
-      "Action" : 11,
-      "Text" : "0x1b 0x7f"
+      "Text" : "0x1b 0x7f",
+      "Action" : 11
     },
     "0x7f-0x100000" : {
-      "Action" : 11,
-      "Text" : "0x15"
+      "Text" : "0x15",
+      "Action" : 11
     }
   },
   "Visual Bell" : true,
@@ -605,6 +605,7 @@
     "Alpha Component" : 0.019607843137254902,
     "Green Component" : 1
   },
+  "Show Mark Indicators" : false,
   "Use Cursor Guide (Light)" : false,
   "Custom Directory" : "Recycle",
   "Working Directory" : "\/Users\/aschmitz",
