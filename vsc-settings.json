@@ -55,5 +55,5 @@
   "monkeyC.developerKeyPath": "/Users/aschmitz/dev/garmin/MinimalWatchFace/developer_key",
   "workbench.colorTheme": "GitHub Dark",
   "gitlens.views.commitDetails.files.layout": "tree",
-  "editor.fontFamily": "Meslo LGS NF, Menlo, Monaco, 'Courier New', monospace"
+  "editor.fontFamily": "MesloLGS NF, Menlo, Monaco, 'Courier New', monospace"
 }

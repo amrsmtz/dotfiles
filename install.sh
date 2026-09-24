@@ -21,6 +21,10 @@ BREW_FORMULAS=(
   zsh-syntax-highlighting
 )
 
+FONTS_DIR="$HOME/Library/Fonts"
+FONT_STYLES=(Regular Bold Italic "Bold Italic")
+FONT_URL="https://github.com/romkatv/powerlevel10k-media/raw/master"
+
 info() { printf '\033[34m==>\033[0m %s\n' "$1"; }
 warn() { printf '\033[33mWarning:\033[0m %s\n' "$1"; }
 
@@ -35,6 +39,20 @@ install_brew_formulas() {
     else
       info "Installing $formula"
       brew install "$formula"
+    fi
+  done
+}
+
+# MesloLGS NF, the terminal font used by the iTerm2 profile
+install_fonts() {
+  mkdir -p "$FONTS_DIR"
+  for style in "${FONT_STYLES[@]}"; do
+    local file="MesloLGS NF $style.ttf"
+    if [ -f "$FONTS_DIR/$file" ]; then
+      info "$file already installed"
+    else
+      info "Installing $file"
+      curl -fsSL "$FONT_URL/${file// /%20}" -o "$FONTS_DIR/$file"
     fi
   done
 }
@@ -59,6 +77,7 @@ link() {
 }
 
 install_brew_formulas
+install_fonts
 
 for path in "${LINKS[@]}"; do
   link "$path"
@@ -66,9 +85,6 @@ done
 
 if [ ! -s "$HOME/.nvm/nvm.sh" ]; then
   warn "nvm is not installed, see https://github.com/nvm-sh/nvm#installing-and-updating"
-fi
-if [ ! -d /opt/homebrew/opt/openssl@1.1 ]; then
-  warn "openssl@1.1 is missing (disabled in Homebrew), only needed to compile Ruby 3.0 and older"
 fi
 
 cat <<EOF

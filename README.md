@@ -9,7 +9,7 @@ git clone https://github.com/amrsmtz/dotfiles.git ~/dotfiles
 ~/dotfiles/install.sh
 ```
 
-The script installs the missing Homebrew formulas and creates the symlinks below. Existing files are backed up with a `.bak.<date>` suffix, and running it again is safe. The iTerm2 profile and the VS Code settings still need to be imported by hand.
+The script installs the missing Homebrew formulas and the MesloLGS NF font, then creates the symlinks below. Existing files are backed up with a `.bak.<date>` suffix, and running it again is safe. The iTerm2 profile and the VS Code settings still need to be imported by hand.
 
 ## Contents
 
@@ -19,7 +19,6 @@ Zsh configuration: history, completion, aliases, and lazy loading of nvm to keep
 Requirements:
 * Homebrew: `starship`, `zsh-syntax-highlighting`, `rbenv`, `openjdk`, and `neovim`
 * [nvm](https://github.com/nvm-sh/nvm), installed with its install script in `~/.nvm`
-* `openssl@1.1`, only to compile Ruby 3.0 and older (disabled in Homebrew, so it can no longer be installed with `brew install`)
 
 ```bash
 ln -s ~/dotfiles/.zshrc ~/.zshrc
