@@ -5,8 +5,8 @@ This repository contains my personal configuration files (dotfiles) for the tool
 ## Installation
 
 ```bash
-git clone https://github.com/amrsmtz/dotfiles.git ~/dotfiles
-~/dotfiles/install.sh
+git clone https://github.com/amrsmtz/dotfiles.git ~/dev/dotfiles
+~/dev/dotfiles/install.sh
 ```
 
 The script installs the missing Homebrew formulas and the MesloLGS NF font, then creates the symlinks below. Existing files are backed up with a `.bak.<date>` suffix, and running it again is safe. The iTerm2 profile still needs to be imported by hand.
@@ -21,21 +21,21 @@ Requirements:
 * [nvm](https://github.com/nvm-sh/nvm), installed with its install script in `~/.nvm`
 
 ```bash
-ln -s ~/dotfiles/.zshrc ~/.zshrc
+ln -s ~/dev/dotfiles/.zshrc ~/.zshrc
 ```
 
 ### .config/starship.toml
 Starship prompt configuration, based on the [Tokyo Night preset](https://starship.rs/presets/tokyo-night) with a Ruby segment added and the prompt kept on a single line.
 
 ```bash
-ln -s ~/dotfiles/.config/starship.toml ~/.config/starship.toml
+ln -s ~/dev/dotfiles/.config/starship.toml ~/.config/starship.toml
 ```
 
 ### .config/nvim
 Neovim configuration, based on [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim). Plugins are managed by lazy.nvim and pinned in `lazy-lock.json`.
 
 ```bash
-ln -s ~/dotfiles/.config/nvim ~/.config/nvim
+ln -s ~/dev/dotfiles/.config/nvim ~/.config/nvim
 ```
 
 ### iterm2-githubdark-profile.json
@@ -45,5 +45,5 @@ iTerm2 profile using the GitHub Dark colors. Import it in iTerm2 under Settings 
 VS Code user settings.
 
 ```bash
-ln -s ~/dotfiles/vsc-settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s ~/dev/dotfiles/vsc-settings.json ~/Library/Application\ Support/Code/User/settings.json
 ```
