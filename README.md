@@ -25,7 +25,7 @@ ln -s ~/dotfiles/.zshrc ~/.zshrc
 ```
 
 ### .config/starship.toml
-Starship prompt configuration (single line prompt).
+Starship prompt configuration, based on the [Tokyo Night preset](https://starship.rs/presets/tokyo-night) with a Ruby segment added and the prompt kept on a single line.
 
 ```bash
 ln -s ~/dotfiles/.config/starship.toml ~/.config/starship.toml
