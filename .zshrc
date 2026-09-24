@@ -1,4 +1,4 @@
-export PATH="$HOME/bin:/opt/homebrew/sbin:/usr/local/bin:/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:/usr/local/bin:/opt/homebrew/bin:$PATH"
 
 # Shell settings (formerly provided by oh-my-zsh)
 
@@ -18,10 +18,6 @@ setopt auto_cd                # type a directory name to cd into it
 setopt auto_pushd             # cd pushes the old directory onto the stack
 setopt pushd_ignore_dups
 setopt pushdminus
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias la="ls -lAh"
 
 # Completion
 autoload -Uz compinit && compinit
@@ -74,13 +70,6 @@ _rake_wrapper() {
 alias rails="_rails_wrapper"
 alias rake="_rake_wrapper"
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
@@ -89,51 +78,19 @@ else
   export VISUAL='nvim'
 fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
 # Aliases
 alias c="rails c"
 alias cap="bundle exec cap"
-alias esearch="cd Applications/elasticsearch-7.17.16/bin && elasticsearch -d"
 alias formulaires="cd ~/dev/formulaires"
-alias ip="curl ipinfo.io/ip"
-alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias kamal="bundle exec kamal"
 alias ll="ls -lah"
 alias ludoludo="cd ~/dev/ludoludo"
 alias nvimrc="nvim ~/.config/nvim/init.lua"
 alias rspec="bundle exec rspec"
-alias serve='ruby -run -e httpd . -p 8000' # Quickly serve the current directory as HTTP
 alias synbad="cd ~/dev/synbad"
 alias vim="nvim"
 alias zshrc="vim ~/.zshrc"
 alias zshsource="source ~/.zshrc"
-
-# Functions
-
-rmine() {
-    if [ -z "$1" ]; then
-        # No argument provided, use current git repo
-        local repo_path=$(git rev-parse --show-toplevel 2>/dev/null)
-        if [ -n "$repo_path" ]; then
-            open -a /Applications/RubyMine.app "$repo_path"
-        else
-            echo "Not in a Git repository and no path provided."
-        fi
-    else
-        # Argument provided, use it as the path
-        if [ -d "$1" ]; then
-            open -a /Applications/RubyMine.app "$1"
-        else
-            echo "The provided path is not a directory."
-        fi
-    fi
-}
-
-# Build tooling
-# Set the PKG_CONFIG_PATH environment variable to use the older OpenSSL version
-export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
 
 # Activate syntax highlighting
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -142,9 +99,6 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # For Ruby 2.x - 3.0
 # Hardcoded path: `brew --prefix` costs ~0.4s at every shell startup
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/homebrew/opt/openssl@1.1"
-# ************* OR **************
-# For Ruby 3.1 and above
-# export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/homebrew/opt/openssl@3"
 eval "$(rbenv init - -zsh)"
 
 # Node / nvm
@@ -166,11 +120,6 @@ nvm() {
 # Java / OpenJDK
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
-
-# Elasticsearch
-export ES_HOME="$HOME/Applications/elasticsearch-7.17.16"
-export ES_JAVA_HOME="$HOME/Applications/elasticsearch-7.17.16/jdk.app/Contents/Home"
-export PATH="$ES_HOME/bin:$ES_JAVA_HOME/bin:$PATH"
 
 # Local bin
 export PATH="$HOME/.local/bin:$PATH"
