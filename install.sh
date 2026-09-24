@@ -57,9 +57,10 @@ install_fonts() {
   done
 }
 
+# Usage: link <path in repo> [destination], defaults to the same path in $HOME
 link() {
   local src="$DOTFILES_DIR/$1"
-  local dst="$HOME/$1"
+  local dst="${2:-$HOME/$1}"
 
   if [ -L "$dst" ] && [ "$(readlink "$dst")" = "$src" ]; then
     info "$dst already linked"
@@ -82,6 +83,7 @@ install_fonts
 for path in "${LINKS[@]}"; do
   link "$path"
 done
+link vsc-settings.json "$HOME/Library/Application Support/Code/User/settings.json"
 
 if [ ! -s "$HOME/.nvm/nvm.sh" ]; then
   warn "nvm is not installed, see https://github.com/nvm-sh/nvm#installing-and-updating"
@@ -91,6 +93,5 @@ cat <<EOF
 
 Done. Remaining manual steps:
   * iTerm2: import iterm2-githubdark-profile.json under Settings > Profiles > Other Actions > Import JSON Profiles
-  * VS Code: copy vsc-settings.json into ~/Library/Application Support/Code/User/settings.json
   * Open a new terminal to load the shell configuration
 EOF

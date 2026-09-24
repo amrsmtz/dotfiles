@@ -9,7 +9,7 @@ git clone https://github.com/amrsmtz/dotfiles.git ~/dotfiles
 ~/dotfiles/install.sh
 ```
 
-The script installs the missing Homebrew formulas and the MesloLGS NF font, then creates the symlinks below. Existing files are backed up with a `.bak.<date>` suffix, and running it again is safe. The iTerm2 profile and the VS Code settings still need to be imported by hand.
+The script installs the missing Homebrew formulas and the MesloLGS NF font, then creates the symlinks below. Existing files are backed up with a `.bak.<date>` suffix, and running it again is safe. The iTerm2 profile still needs to be imported by hand.
 
 ## Contents
 
@@ -42,4 +42,8 @@ ln -s ~/dotfiles/.config/nvim ~/.config/nvim
 iTerm2 profile using the GitHub Dark colors. Import it in iTerm2 under Settings > Profiles > Other Actions > Import JSON Profiles.
 
 ### vsc-settings.json
-VS Code settings. Copy the content of this file in the `settings.json` file of VS Code.
+VS Code user settings.
+
+```bash
+ln -s ~/dotfiles/vsc-settings.json ~/Library/Application\ Support/Code/User/settings.json
+```
