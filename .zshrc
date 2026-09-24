@@ -96,9 +96,6 @@ alias zshsource="source ~/.zshrc"
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Ruby / rbenv
-# For Ruby 2.x - 3.0
-# Hardcoded path: `brew --prefix` costs ~0.4s at every shell startup
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/homebrew/opt/openssl@1.1"
 eval "$(rbenv init - -zsh)"
 
 # Node / nvm
