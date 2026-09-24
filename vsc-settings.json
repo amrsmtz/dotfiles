@@ -1,9 +1,14 @@
 {
+  "editor.detectIndentation": false,
+  "editor.fontFamily": "MesloLGS NF, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 13,
   "editor.formatOnSave": false,
   "editor.minimap.enabled": false,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -15,6 +20,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[ruby]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
     "editor.defaultFormatter": "Shopify.ruby-lsp",
     "editor.formatOnSave": false
   },
@@ -38,6 +45,7 @@
   "i18n-ally.enabledFrameworks": [
     "ruby-rails"
   ],
+  "i18n-ally.keystyle": "nested",
   "i18n-ally.localesPaths": [
     "config/locales"
   ],
@@ -45,15 +53,82 @@
   "rubyLsp.rubyVersionManager": {
     "identifier": "rbenv",
   },
-  "rubyLsp.formatter": "auto",
+  "rubyLsp.formatter": "syntax_tree",
   "security.workspace.trust.untrustedFiles": "open",
   "terminal.external.osxExec": "iTerm.app",
+  "terminal.explorerKind": "external",
   "vscode-erb-beautify.customEnvVar": {
     "LC_ALL": "en_US.UTF-8"
   },
-  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.ignoreTrimWhitespace": true,
   "monkeyC.developerKeyPath": "/Users/aschmitz/dev/garmin/MinimalWatchFace/developer_key",
-  "workbench.colorTheme": "GitHub Dark",
   "gitlens.views.commitDetails.files.layout": "tree",
-  "editor.fontFamily": "MesloLGS NF, Menlo, Monaco, 'Courier New', monospace"
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "debug.disassemblyView.showSourceCode": false,
+  "gitlens.advanced.messages": {
+    "suppressLineUncommittedWarning": true
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "Commit messages should be in French but follow conventional commit standards. The message should be concise, clear, and descriptive of the changes made. Use imperative mood and present tense. Avoid using personal pronouns or unnecessary details. Focus on the impact of the changes and the problem they solve."
+    }
+  ],
+  "gitlens.graph.minimap.enabled": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "gitlens.views.scm.grouped.views": {
+    "commits": true,
+    "branches": true,
+    "remotes": true,
+    "stashes": true,
+    "tags": true,
+    "worktrees": true,
+    "contributors": true,
+    "fileHistory": false,
+    "repositories": true,
+    "searchAndCompare": false,
+    "launchpad": false
+  },
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "terminal.integrated.fontSize": 13,
+  "debug.console.fontSize": 13,
+  "markdown.preview.fontSize": 13,
+  "tailwindCSS.rootFontSize": 13,
+  "chat.tools.terminal.autoApprove": {
+    "sed": true
+  },
+  "terminal.integrated.initialHint": false,
+  "claudeCode.preferredLocation": "panel",
+  "chat.viewSessions.orientation": "stacked",
+  "chat.mcp.gallery.enabled": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.exclude": {
+    "**/.git": false
+  },
+  "search.exclude": {
+    "**/.git": true
+  },
+  "workbench.colorTheme": "GitHub Dark",
+  "claudeCode.hideOnboarding": true,
+  "claudeCode.focusView": true,
+  "chat.disableAIFeatures": true,
+  "terminal.integrated.fontFamily": "MesloLGS NF",
 }
