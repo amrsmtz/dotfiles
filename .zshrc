@@ -38,6 +38,7 @@ bindkey '^[OB' down-line-or-beginning-search
 export CLICOLOR=1
 
 # Git aliases (from the oh-my-zsh git plugin)
+alias gaa="git add --all"
 alias gb="git branch"
 alias gbd="git branch --delete"
 alias gbD="git branch --delete --force"
