@@ -1,24 +1,46 @@
 # My Dotfiles
 
-This repository contains my personal configuration files (dotfiles) for various tools and applications I use on the command line and elsewhere. These configurations help personalize my development environment and streamline my workflow.
+This repository contains my personal configuration files (dotfiles) for the tools I use on macOS.
+
+## Installation
+
+```bash
+git clone https://github.com/amrsmtz/dotfiles.git ~/dotfiles
+~/dotfiles/install.sh
+```
+
+The script installs the missing Homebrew formulas and creates the symlinks below. Existing files are backed up with a `.bak.<date>` suffix, and running it again is safe. The iTerm2 profile and the VS Code settings still need to be imported by hand.
 
 ## Contents
 
-### GitHub Dark Dimmed.itermcolors
-Import this file in your iTerm2 colors.
-
-### iterm2-profile.json
-Import this json file in your iTerm2 configurations.
-
 ### .zshrc
+Zsh configuration: history, completion, aliases, and lazy loading of nvm to keep shell startup fast. The prompt is provided by Starship.
+
+Requirements:
+* Homebrew: `starship`, `zsh-syntax-highlighting`, `rbenv`, `openjdk`, and `neovim`
+* [nvm](https://github.com/nvm-sh/nvm), installed with its install script in `~/.nvm`
+* `openssl@1.1`, only to compile Ruby 3.0 and older (disabled in Homebrew, so it can no longer be installed with `brew install`)
+
 ```bash
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ```
 
-### vsc-settings.json
-Copy the content of this file in the settings.json file for your VS Code.
+### .config/starship.toml
+Starship prompt configuration (single line prompt).
+
+```bash
+ln -s ~/dotfiles/.config/starship.toml ~/.config/starship.toml
+```
 
 ### .config/nvim
+Neovim configuration, based on [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim). Plugins are managed by lazy.nvim and pinned in `lazy-lock.json`.
+
 ```bash
 ln -s ~/dotfiles/.config/nvim ~/.config/nvim
 ```
+
+### iterm2-githubdark-profile.json
+iTerm2 profile using the GitHub Dark colors. Import it in iTerm2 under Settings > Profiles > Other Actions > Import JSON Profiles.
+
+### vsc-settings.json
+VS Code settings. Copy the content of this file in the `settings.json` file of VS Code.
