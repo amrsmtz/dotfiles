@@ -82,16 +82,23 @@ fi
 # Aliases
 alias c="rails c"
 alias cap="bundle exec cap"
-alias formulaires="cd ~/dev/formulaires"
 alias kamal="bundle exec kamal"
 alias ll="ls -lah"
-alias ludoludo="cd ~/dev/ludoludo"
 alias nvimrc="nvim ~/.config/nvim/init.lua"
 alias rspec="bundle exec rspec"
-alias synbad="cd ~/dev/synbad"
 alias vim="nvim"
 alias zshrc="vim ~/.zshrc"
 alias zshsource="source ~/.zshrc"
+
+# One alias per git repo in ~/dev: `<repo>` jumps to ~/dev/<repo>.
+# Names already taken by a command, alias or function are skipped.
+_dev_repo_aliases() {
+  local repo
+  for repo in ~/dev/*/.git(N:h); do
+    whence -- "${repo:t}" >/dev/null || alias -- "${repo:t}"="cd ${(q)repo}"
+  done
+}
+_dev_repo_aliases
 
 # Activate syntax highlighting
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
