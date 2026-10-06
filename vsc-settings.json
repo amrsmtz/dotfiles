@@ -71,7 +71,7 @@
   "github.copilot.nextEditSuggestions.enabled": true,
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
-      "text": "Commit messages should be in French but follow conventional commit standards. The message should be concise, clear, and descriptive of the changes made. Use imperative mood and present tense. Avoid using personal pronouns or unnecessary details. Focus on the impact of the changes and the problem they solve."
+      "text": "Commit messages should be in the language of previous commits. The message should be concise, clear, and descriptive of the changes made. Use imperative mood and present tense. Avoid using personal pronouns or unnecessary details. Focus on the impact of the changes and the problem they solve."
     }
   ],
   "gitlens.graph.minimap.enabled": false,
@@ -129,6 +129,5 @@
   "workbench.colorTheme": "GitHub Dark",
   "claudeCode.hideOnboarding": true,
   "claudeCode.focusView": true,
-  "chat.disableAIFeatures": true,
   "terminal.integrated.fontFamily": "MesloLGS NF",
 }
