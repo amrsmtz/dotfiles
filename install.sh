@@ -25,6 +25,8 @@ FONTS_DIR="$HOME/Library/Fonts"
 FONT_STYLES=(Regular Bold Italic "Bold Italic")
 FONT_URL="https://github.com/romkatv/powerlevel10k-media/raw/master"
 
+SECRETS_FILE="$HOME/.secrets"
+
 info() { printf '\033[34m==>\033[0m %s\n' "$1"; }
 warn() { printf '\033[33mWarning:\033[0m %s\n' "$1"; }
 
@@ -77,6 +79,16 @@ link() {
   info "Linked $dst -> $src"
 }
 
+# Untracked file sourced by .zshrc, holds tokens and other machine-specific secrets
+create_secrets_file() {
+  if [ -e "$SECRETS_FILE" ]; then
+    info "$SECRETS_FILE already exists"
+  else
+    (umask 077 && touch "$SECRETS_FILE")
+    info "Created $SECRETS_FILE"
+  fi
+}
+
 install_brew_formulas
 install_fonts
 
@@ -84,6 +96,7 @@ for path in "${LINKS[@]}"; do
   link "$path"
 done
 link vsc-settings.json "$HOME/Library/Application Support/Code/User/settings.json"
+create_secrets_file
 
 if [ ! -s "$HOME/.nvm/nvm.sh" ]; then
   warn "nvm is not installed, see https://github.com/nvm-sh/nvm#installing-and-updating"

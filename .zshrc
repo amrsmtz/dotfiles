@@ -123,3 +123,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Prompt
 eval "$(starship init zsh)"
+
+# Ajout des secrets
+grep -qxF '[ -f ~/.secrets ] && source ~/.secrets' ~/.zshrc || echo '[ -f ~/.secrets ] && source ~/.secrets' >> ~/.zshrc
+[ -f ~/.secrets ] && source ~/.secrets
