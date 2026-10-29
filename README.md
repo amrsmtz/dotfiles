@@ -9,7 +9,7 @@ git clone https://github.com/amrsmtz/dotfiles.git ~/dev/dotfiles
 ~/dev/dotfiles/install.sh
 ```
 
-The script installs the missing Homebrew formulas and the MesloLGS NF font, then creates the symlinks below. Existing files are backed up with a `.bak.<date>` suffix, and running it again is safe. The iTerm2 profile still needs to be imported by hand.
+The script installs the missing Homebrew formulas and the MesloLGS NF font, installs Hammerspoon, then creates the symlinks below. Existing files are backed up with a `.bak.<date>` suffix, and running it again is safe. The iTerm2 profile still needs to be imported by hand.
 
 ## Contents
 
@@ -36,6 +36,13 @@ Neovim configuration, based on [kickstart.nvim](https://github.com/nvim-lua/kick
 
 ```bash
 ln -s ~/dev/dotfiles/.config/nvim ~/.config/nvim
+```
+
+### .hammerspoon/init.lua
+[Hammerspoon](https://www.hammerspoon.org) configuration: keyboard shortcuts to tile the focused window (`ctrl+alt` + arrows or return) and move it to the next or previous screen (`ctrl+alt+cmd` + left/right). Hammerspoon is installed by the script with Homebrew, and needs the Accessibility permission under System Settings > Privacy & Security > Accessibility.
+
+```bash
+ln -s ~/dev/dotfiles/.hammerspoon/init.lua ~/.hammerspoon/init.lua
 ```
 
 ### iterm2-githubdark-profile.json

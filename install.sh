@@ -11,6 +11,7 @@ LINKS=(
   .zshrc
   .config/starship.toml
   .config/nvim
+  .hammerspoon/init.lua
 )
 
 BREW_FORMULAS=(
@@ -19,6 +20,11 @@ BREW_FORMULAS=(
   rbenv
   starship
   zsh-syntax-highlighting
+)
+
+# Casks and the app each one installs, to detect apps installed outside Homebrew
+BREW_CASKS=(
+  "hammerspoon:Hammerspoon.app"
 )
 
 FONTS_DIR="$HOME/Library/Fonts"
@@ -41,6 +47,23 @@ install_brew_formulas() {
     else
       info "Installing $formula"
       brew install "$formula"
+    fi
+  done
+}
+
+install_brew_casks() {
+  if ! command -v brew >/dev/null 2>&1; then
+    warn "Homebrew is not installed, skipping casks (see https://brew.sh)"
+    return
+  fi
+  for entry in "${BREW_CASKS[@]}"; do
+    local cask="${entry%%:*}"
+    local app="${entry#*:}"
+    if brew list --cask "$cask" >/dev/null 2>&1 || [ -d "/Applications/$app" ]; then
+      info "$cask already installed"
+    else
+      info "Installing $cask"
+      brew install --cask "$cask"
     fi
   done
 }
@@ -90,6 +113,7 @@ create_secrets_file() {
 }
 
 install_brew_formulas
+install_brew_casks
 install_fonts
 
 for path in "${LINKS[@]}"; do
@@ -106,5 +130,6 @@ cat <<EOF
 
 Done. Remaining manual steps:
   * iTerm2: import iterm2-githubdark-profile.json under Settings > Profiles > Other Actions > Import JSON Profiles
+  * Hammerspoon: launch it and allow it under System Settings > Privacy & Security > Accessibility
   * Open a new terminal to load the shell configuration
 EOF
