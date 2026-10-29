@@ -15,6 +15,9 @@ hs.hotkey.bind(mod, "up",     place({0,   0,   1,   0.5}))
 hs.hotkey.bind(mod, "down",   place({0,   0.5, 1,   0.5}))
 hs.hotkey.bind(mod, "return", place({0,   0,   1,   1}))
 
+-- Centrer la fenêtre en lui donnant 70 % × 80 % de l'écran
+hs.hotkey.bind(mod, "c", place({0.15, 0.1, 0.7, 0.8}))
+
 -- Envoyer la fenêtre sur l'écran suivant / précédent
 -- (elle garde sa taille et sa position relatives)
 hs.hotkey.bind({"ctrl", "alt", "cmd"}, "right", function()
