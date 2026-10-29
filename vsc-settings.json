@@ -7,31 +7,31 @@
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "vscode.html-language-features",
   },
   "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[erb]": {
     "editor.defaultFormatter": "aliariff.vscode-erb-beautify",
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[ruby]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
     "editor.defaultFormatter": "Shopify.ruby-lsp",
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
   },
   "emmet.includeLanguages": {
-    "erb": "html"
+    "erb": "html",
   },
   "explorer.confirmDelete": false,
   "files.associations": {
     "*.html.erb": "erb",
-    "*.js.erb": "javascript"
+    "*.js.erb": "javascript",
   },
   "files.autoSave": "afterDelay",
   "git.autofetch": true,
@@ -42,13 +42,9 @@
   "gitlens.views.searchAndCompare.files.layout": "list",
   "i18n-ally.sourceLanguage": "fr",
   "i18n-ally.displayLanguage": "fr",
-  "i18n-ally.enabledFrameworks": [
-    "ruby-rails"
-  ],
+  "i18n-ally.enabledFrameworks": ["ruby-rails"],
   "i18n-ally.keystyle": "nested",
-  "i18n-ally.localesPaths": [
-    "config/locales"
-  ],
+  "i18n-ally.localesPaths": ["config/locales"],
   "i18n-ally.translate.engines": ["google"],
   "rubyLsp.rubyVersionManager": {
     "identifier": "rbenv",
@@ -58,7 +54,7 @@
   "terminal.external.osxExec": "iTerm.app",
   "terminal.explorerKind": "external",
   "vscode-erb-beautify.customEnvVar": {
-    "LC_ALL": "en_US.UTF-8"
+    "LC_ALL": "en_US.UTF-8",
   },
   "diffEditor.ignoreTrimWhitespace": true,
   "monkeyC.developerKeyPath": "/Users/aschmitz/dev/garmin/MinimalWatchFace/developer_key",
@@ -66,20 +62,32 @@
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "debug.disassemblyView.showSourceCode": false,
   "gitlens.advanced.messages": {
-    "suppressLineUncommittedWarning": true
+    "suppressLineUncommittedWarning": true,
   },
   "github.copilot.nextEditSuggestions.enabled": true,
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
-      "text": "Commit messages should be in the language of previous commits. The message should be concise, clear, and descriptive of the changes made. Use imperative mood and present tense. Avoid using personal pronouns or unnecessary details. Focus on the impact of the changes and the problem they solve."
-    }
+      "text": "Write the commit message in the same language as the recent commits in this repository.",
+    },
+    {
+      "text": "Format the subject line as: <current-branch-name>: <summary>. Example: feature/user-auth: Add password reset flow. Exception: if the current branch is main, staging or master, omit the branch name and the colon, and write only the summary. Example: Add password reset flow",
+    },
+    {
+      "text": "Keep the subject line under 72 characters, in the imperative mood and present tense (Add, Fix, Remove, Update), with no trailing period.",
+    },
+    {
+      "text": "If the change is not self-explanatory, add a body after a blank line explaining what problem the change solves and why. Do not describe how the code works.",
+    },
+    {
+      "text": "Do not use personal pronouns, filler words or generic phrases such as 'various changes' or 'minor fixes'.",
+    },
   ],
   "gitlens.graph.minimap.enabled": false,
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "gitlens.views.scm.grouped.views": {
     "commits": true,
@@ -92,17 +100,17 @@
     "fileHistory": false,
     "repositories": true,
     "searchAndCompare": false,
-    "launchpad": false
+    "launchpad": false,
   },
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "[dockercompose]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
     "editor.autoIndent": "advanced",
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "[github-actions-workflow]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "gitlens.ai.model": "vscode",
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
@@ -111,23 +119,23 @@
   "markdown.preview.fontSize": 13,
   "tailwindCSS.rootFontSize": 13,
   "chat.tools.terminal.autoApprove": {
-    "sed": true
+    "sed": true,
   },
   "terminal.integrated.initialHint": false,
   "claudeCode.preferredLocation": "panel",
   "chat.viewSessions.orientation": "stacked",
   "chat.mcp.gallery.enabled": true,
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "files.exclude": {
-    "**/.git": false
+    "**/.git": false,
   },
   "search.exclude": {
-    "**/.git": true
+    "**/.git": true,
   },
   "workbench.colorTheme": "GitHub Dark",
   "claudeCode.hideOnboarding": true,
-  "claudeCode.focusView": true,
+  "claudeCode.focusView": false,
   "terminal.integrated.fontFamily": "MesloLGS NF",
 }
