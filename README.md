@@ -45,7 +45,7 @@ ln -s ~/dev/dotfiles/.config/nvim ~/.config/nvim
 ln -s ~/dev/dotfiles/.hammerspoon/init.lua ~/.hammerspoon/init.lua
 ```
 
-### iterm2-githubdark-profile.json
+### iterm2-profile.json
 iTerm2 profile using the GitHub Dark colors. Import it in iTerm2 under Settings > Profiles > Other Actions > Import JSON Profiles.
 
 ### vsc-settings.json

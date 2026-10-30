@@ -129,7 +129,7 @@ fi
 cat <<EOF
 
 Done. Remaining manual steps:
-  * iTerm2: import iterm2-githubdark-profile.json under Settings > Profiles > Other Actions > Import JSON Profiles
+  * iTerm2: import iterm2-profile.json under Settings > Profiles > Other Actions > Import JSON Profiles
   * Hammerspoon: launch it and allow it under System Settings > Privacy & Security > Accessibility
   * Open a new terminal to load the shell configuration
 EOF
