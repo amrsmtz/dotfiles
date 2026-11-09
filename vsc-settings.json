@@ -67,13 +67,13 @@
   "github.copilot.nextEditSuggestions.enabled": true,
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
-      "text": "Write the commit message in the same language as the recent commits in this repository.",
+      "text": "Write the commit message in the same language as the recent commits in this repository, except the automatic messages of git .",
     },
     {
       "text": "Format the subject line as: <current-branch-name>: <summary>. Example: feature/user-auth: Add password reset flow. Exception: if the current branch is main, staging or master, omit the branch name and the colon, and write only the summary. Example: Add password reset flow",
     },
     {
-      "text": "Keep the subject line under 72 characters, in the imperative mood and present tense (Add, Fix, Remove, Update), with no trailing period.",
+      "text": "Write the commit message as a single line only: keep it under 48 characters, in the imperative mood and present tense (Add, Fix, Remove, Update), with no trailing period, no body and no line breaks.",
     },
     {
       "text": "If the change is not self-explanatory, add a body after a blank line explaining what problem the change solves and why. Do not describe how the code works.",
