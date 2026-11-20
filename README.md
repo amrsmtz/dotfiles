@@ -17,7 +17,7 @@ The script installs the missing Homebrew formulas and the MesloLGS NF font, inst
 Zsh configuration: history, completion, aliases, and lazy loading of nvm to keep shell startup fast. The prompt is provided by Starship.
 
 Requirements:
-* Homebrew: `starship`, `zsh-syntax-highlighting`, `rbenv`, `openjdk`, and `neovim`
+* Homebrew: `starship`, `zsh-syntax-highlighting`, `rbenv`, and `openjdk`
 * [nvm](https://github.com/nvm-sh/nvm), installed with its install script in `~/.nvm`
 
 ```bash
@@ -31,11 +31,11 @@ Starship prompt configuration, based on the [Tokyo Night preset](https://starshi
 ln -s ~/dev/dotfiles/.config/starship.toml ~/.config/starship.toml
 ```
 
-### .config/nvim
-Neovim configuration, based on [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim). Plugins are managed by lazy.nvim and pinned in `lazy-lock.json`.
+### .vimrc
+Minimal configuration for the Vim that ships with macOS. It uses the terminal's ANSI colors, so it follows the iTerm2 palette without any colorscheme plugin.
 
 ```bash
-ln -s ~/dev/dotfiles/.config/nvim ~/.config/nvim
+ln -s ~/dev/dotfiles/.vimrc ~/.vimrc
 ```
 
 ### .hammerspoon/init.lua

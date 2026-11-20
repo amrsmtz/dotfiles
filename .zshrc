@@ -71,22 +71,17 @@ _rake_wrapper() {
 alias rails="_rails_wrapper"
 alias rake="_rake_wrapper"
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-  export VISUAL='nvim'
-fi
+# Preferred editor
+export EDITOR='vim'
+export VISUAL='vim'
 
 # Aliases
 alias c="rails c"
 alias cap="bundle exec cap"
 alias kamal="bundle exec kamal"
 alias ll="ls -lah"
-alias nvimrc="nvim ~/.config/nvim/init.lua"
 alias rspec="bundle exec rspec"
-alias vim="nvim"
+alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/.zshrc"
 alias zshsource="source ~/.zshrc"
 

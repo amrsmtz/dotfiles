@@ -10,12 +10,11 @@ DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 LINKS=(
   .zshrc
   .config/starship.toml
-  .config/nvim
+  .vimrc
   .hammerspoon/init.lua
 )
 
 BREW_FORMULAS=(
-  neovim
   openjdk
   rbenv
   starship
