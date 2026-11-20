@@ -32,10 +32,12 @@ ln -s ~/dev/dotfiles/.config/starship.toml ~/.config/starship.toml
 ```
 
 ### .vimrc
-Minimal configuration for the Vim that ships with macOS. It uses the terminal's ANSI colors, so it follows the iTerm2 palette without any colorscheme plugin.
+Minimal configuration for the Vim that ships with macOS. In a truecolor terminal it uses `.vim/colors/github_dark_dimmed.vim`, a plugin-free colorscheme with the palette of VS Code's GitHub Dark Dimmed theme; elsewhere it falls back to the terminal's ANSI colors.
 
 ```bash
 ln -s ~/dev/dotfiles/.vimrc ~/.vimrc
+mkdir -p ~/.vim/colors
+ln -s ~/dev/dotfiles/.vim/colors/github_dark_dimmed.vim ~/.vim/colors/github_dark_dimmed.vim
 ```
 
 ### .hammerspoon/init.lua

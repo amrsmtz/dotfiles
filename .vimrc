@@ -5,10 +5,16 @@
 unlet! skip_defaults_vim
 source $VIMRUNTIME/defaults.vim
 
-" Colors: use the terminal's 16 ANSI colors so Vim follows the iTerm2 palette
-set notermguicolors
+" Colors: GitHub Dark Dimmed (same as VS Code) when the terminal supports
+" truecolor, otherwise the terminal's 16 ANSI colors
 set background=dark
-colorscheme default
+if $COLORTERM =~# 'truecolor\|24bit'
+  set termguicolors
+  silent! colorscheme github_dark_dimmed
+else
+  set notermguicolors
+  colorscheme default
+endif
 
 set number
 set hlsearch

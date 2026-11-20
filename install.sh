@@ -11,6 +11,7 @@ LINKS=(
   .zshrc
   .config/starship.toml
   .vimrc
+  .vim/colors/github_dark_dimmed.vim
   .hammerspoon/init.lua
 )
 
